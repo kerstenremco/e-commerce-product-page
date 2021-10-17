@@ -22,7 +22,7 @@ Users should be able to:
 
 - Semantic HTML5 markup
 
-- SASS
+- SASS (using 7 - 1 structure for SASS file organisation and BEM architecture)
 
 - JavaScript
 
