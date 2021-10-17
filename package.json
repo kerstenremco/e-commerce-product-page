@@ -4,12 +4,20 @@
   "description": "![Design preview for the E-commerce product page coding challenge](./design/desktop-preview.jpg)",
   "main": "index.js",
   "scripts": {
-    "sass:watch": "sass sass/main.scss styles/style.css -w"
+    "sass:watch": "sass sass/main.scss styles/style.css -w",
+    "build:sass": "sass sass/main.scss styles/build/comp.css",
+    "build:prefix": "postcss --use autoprefixer -b 'last 2 versions' styles/build/comp.css -o styles/build/prefix.css",
+    "build:compress": "sass styles/build/prefix.css styles/style.css --style=compressed",
+    "build": "npm-run-all build:sass build:prefix build:compress"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
+    "autoprefixer": "^10.3.7",
+    "npm-run-all": "^4.1.5",
+    "postcss": "^8.3.9",
+    "postcss-cli": "^9.0.1",
     "sass": "^1.43.2"
   }
 }
