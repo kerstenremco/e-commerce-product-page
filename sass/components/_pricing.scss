@@ -1,0 +1,34 @@
+.pricing {
+  margin: 20px 0;
+
+  &__current,
+  &__discount {
+    display: inline-block;
+    vertical-align: middle;
+    line-height: 35px;
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  &__current {
+    font-size: 35px;
+    color: $color-black;
+    font-weight: 700;
+    margin-right: 10px;
+  }
+
+  &__discount {
+    height: 35px;
+    background-color: $color-orange-pale;
+    color: $color-orange;
+    padding: 1px 8px;
+    box-sizing: border-box;
+    border-radius: 10px;
+  }
+
+  &__previous-price {
+    opacity: 0.6;
+    text-decoration: line-through;
+    margin: 0;
+  }
+}

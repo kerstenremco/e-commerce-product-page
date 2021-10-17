@@ -1,0 +1,26 @@
+.quantity {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: $color-blue-light-grayish;
+  color: $color-black;
+  padding: 10px;
+  font-weight: 700;
+  border-radius: $border-radius;
+  &__value {
+    flex-grow: 1;
+    text-align: center;
+  }
+  &__button {
+    font-size: 26px;
+    color: $color-orange;
+    cursor: pointer;
+    flex-basis: 30px;
+    -webkit-user-select: none;
+    user-select: none;
+
+    &:last-child {
+      text-align: right;
+    }
+  }
+}

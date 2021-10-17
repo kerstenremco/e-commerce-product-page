@@ -1,0 +1,45 @@
+.pictures {
+  height: 100%;
+  &__current-picture {
+    height: 100%;
+    margin-bottom: $gap-images;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: $border-radius;
+      @media (max-width: $breakpoint-1) {
+        border-radius: 0;
+      }
+    }
+  }
+
+  &__tumbnails {
+    display: flex;
+    gap: $gap-images;
+  }
+
+  &__tumbnail {
+    flex: 1 1 0;
+    width: 0;
+    border-radius: $border-radius;
+    overflow: hidden;
+
+    &--active {
+      border: 3px solid $color-orange;
+      img {
+        filter: opacity(0.5);
+      }
+    }
+
+    img {
+      object-fit: cover;
+      height: 100%;
+      width: 100%;
+    }
+
+    @media (max-width: $breakpoint-1) {
+      display: none;
+    }
+  }
+}

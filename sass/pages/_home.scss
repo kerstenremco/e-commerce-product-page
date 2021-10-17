@@ -1,0 +1,37 @@
+.article-section {
+  width: 80vw;
+  margin: 0 auto;
+  display: flex;
+  gap: 10%;
+  align-items: center;
+
+  & > * {
+    @media (max-width: $breakpoint-1) {
+      width: 95vw;
+    }
+  }
+
+  @media (max-width: $breakpoint-1) {
+    flex-direction: column;
+    width: 100vw;
+  }
+
+  .article-section-pictures {
+    @media (max-width: $breakpoint-1) {
+      height: 30vh;
+      width: 100%;
+    }
+  }
+
+  .cart {
+    display: flex;
+    gap: 30px;
+    @media (max-width: $breakpoint-2) {
+      flex-direction: column;
+      gap: 15px;
+    }
+    & > * {
+      flex-grow: 1;
+    }
+  }
+}

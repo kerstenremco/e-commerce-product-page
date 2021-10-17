@@ -1,0 +1,116 @@
+.header {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  // max-width: 85vw;
+  height: 80px;
+  padding: 15px 0;
+  box-sizing: border-box;
+  width: 80vw;
+  margin: 0 auto 90px auto;
+  border-bottom: 1px solid $color-blue-grayish;
+
+  @media (max-width: $breakpoint-1) {
+    // On mobile, hide border and make gap smaller
+    gap: 20px;
+    margin: 0 20px 0 60px;
+    border-bottom: 0;
+    width: initial;
+  }
+
+  // Open and close button, always same position
+  &__logo::before,
+  input,
+  nav ul::before {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    top: 30px;
+    left: 30px;
+
+    @media (min-width: $breakpoint-1) {
+      // Don't show open and close on desktop
+      display: none;
+    }
+  }
+
+  // Make checkbox invisible, and put over open and close image
+  input {
+    margin: 0;
+    z-index: 2;
+    opacity: 0;
+  }
+
+  // If checkbox is checked, change nav width to 70vw
+  input:checked ~ nav {
+    width: 70vw;
+  }
+
+  &__logo {
+    &::before {
+      content: url(/images/icon-menu.svg);
+    }
+  }
+
+  nav {
+    flex-grow: 1;
+
+    ul {
+      display: flex;
+      gap: 20px;
+      list-style: none;
+
+      @media (max-width: $breakpoint-1) {
+        margin-top: 80px;
+        flex-direction: column;
+        gap: 40px;
+        font-size: 20px;
+        font-weight: 700;
+        color: $color-black;
+
+        &::before {
+          content: url(/images/icon-close.svg);
+        }
+      }
+    }
+
+    @media (max-width: $breakpoint-1) {
+      overflow: hidden;
+      z-index: 1;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100vh;
+      width: 0vw;
+      background-color: $color-white;
+      transition: width 1s;
+    }
+  }
+
+  &__logo {
+    @media (max-width: $breakpoint-1) {
+      flex-grow: 1;
+    }
+  }
+
+  &__burger {
+    img {
+      height: 15px;
+      width: 15px;
+    }
+    @media (min-width: $breakpoint-1) {
+      display: none;
+    }
+  }
+
+  &__cart {
+    transition: all 0.5s;
+  }
+
+  &__avatar {
+    height: 100%;
+    img {
+      height: 100%;
+    }
+  }
+}

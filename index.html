@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="/styles/style.css">
+  <title>Frontend Mentor | E-commerce product page</title>
+  <script src="script.js" defer></script>
+</head>
+
+
+<body>
+  <header class="header">
+    <input type="checkbox" name="test" id="test">
+    <div class="header__logo">
+      <img src="images/logo.svg" alt="Logo">
+    </div>
+    <nav>
+      <ul>
+        <li>Collections</li>
+        <li>Men</li>
+        <li>Women</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+    <div class="header__cart"><img src="images/icon-cart.svg" alt="Cart icon"></div>
+    <div class="header__avatar"><img src="images/image-avatar.png" alt="Profile picture"></div>
+  </header>
+
+  <main>
+    <div class="article-section">
+      <div class="article-section-pictures">
+        <div class="pictures">
+          <div class="pictures__current-picture">
+            <img src="images/image-product-1.jpg" alt="Shoe">
+          </div>
+          <div class="pictures__tumbnails">
+            <div class="pictures__tumbnail pictures__tumbnail--active">
+              <img src="images/image-product-1-thumbnail.jpg" alt="Shoe">
+            </div>
+            <div class="pictures__tumbnail">
+              <img src="images/image-product-2-thumbnail.jpg" alt="Shoe">
+            </div>
+            <div class="pictures__tumbnail">
+              <img src="images/image-product-3-thumbnail.jpg" alt="Shoe">
+            </div>
+            <div class="pictures__tumbnail">
+              <img src="images/image-product-4-thumbnail.jpg" alt="Shoe">
+            </div>
+          </div>
+        </div>
+      </div>
+      <div>
+        <p class="tg-small-color">Sneaker Company</p>
+
+        <h2 class="tg-large">Fall Limited Edition Sneakers</h2>
+
+        <p>
+          These low-profile sneakers are your perfect casual wear companion. Featuring a
+          durable rubber outer sole, they’ll withstand everything the weather can offer.
+        </p>
+
+        <div class="pricing">
+          <p class="pricing__current">$125.00</p>
+          <p class="pricing__discount">50%</p>
+          <p class="pricing__previous-price">$250.00</p>
+        </div>
+
+        <div class="cart">
+          <div class="quantity">
+            <div class="quantity__button quantity__button--min">-</div>
+            <div class="quantity__value" data-amount="1">1</div>
+            <div class="quantity__button quantity__button--plus">+</div>
+          </div>
+          <button class="button">
+            <img src="images/icon-cart.svg" alt="Cart">
+            <span>Add to cart</span>
+          </button>
+        </div>
+      </div>
+    </div>
+  </main>
+
+</body>
+
+</html>
